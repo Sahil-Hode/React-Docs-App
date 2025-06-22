@@ -1,0 +1,302 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #000000, #1a1a1a);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #60a5fa;
+}
+
+/* Mobile menu */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 120px 24px 80px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero h2 {
+    font-size: 40px; /* Adjust size as needed */
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 20px; /* Adjust size as needed */
+    margin-bottom: 24px;
+    color: #ccc; /* Adjust color as needed */
+}
+
+.hero a {
+    background-color: #3b82f6;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero a:hover {
+    background-color: #2563eb;
+}
+
+/* Sections */
+section {
+    padding: 80px 24px;
+}
+
+section h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+
+/* About */
+.about {
+    background: linear-gradient(to bottom right, #2d2d2d, #1f1f1f);
+    padding: 100px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.about h3 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
+    color: #60a5fa;
+}
+
+.about h3::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #60a5fa;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+}
+
+.about p {
+    max-width: 800px;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 16px;
+}
+
+.about div {
+    margin-top: 32px;
+    color: #bbb;
+    font-size: 16px;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.about div:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Skills */
+.skills {
+    background-color: #1f1f1f;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.skill-box {
+    background-color: #3a3a3a;
+    padding: 16px;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+}
+
+/* Projects */
+.projects {
+    background-color: #2d2d2d;
+}
+
+.project-card {
+    background-color: #3a3a3a;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-card h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/* Contact */
+.contact {
+    background-color: #1f1f1f;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.contact button {
+    background-color: #3b82f6;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #2563eb;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 32px 16px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer div {
+    margin-top: 8px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
